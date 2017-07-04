@@ -27,7 +27,7 @@ def delivery
 	delivery = ["yes", "no"]
 	x = gets.chomp
 
-end
+end	
 pizza = 1
 x = How_Many?
 
@@ -37,16 +37,16 @@ x.times do []
 
 p "Pizza #{pizza}"
 	pizza += 1
-	if size == "personal $4"
-		p "personal"
+	if size == "personal"
+		p "personal $4"
 		 cost += 4
 		
-		elsif size =="medium $6"
-			p "medium"
+		elsif size =="medium"
+			p "medium $6"
 			cost += 6
 		
-		elsif size == "large $9"
-			 p "large"
+		elsif size == "large"
+			 p "large $9"
 			  cost += 9
 		
 		else 
@@ -59,15 +59,15 @@ puts sauce
 puts cheese
 puts veggies
 puts meats
-
-	
-		
-	
 end
-if delivery == "yes"
-		p "delivery tip $5"
+
+	if delivery == "yes"
+		p "delivery charge $5"
 		cost += 5
 		else
 			p "not delivered"
 	end
-puts "Total is $#{cost}"
+
+p "Subtotal is $#{cost}"
+	tax = "#{cost * 1.06}"
+p "Your total is $#{tax}"
